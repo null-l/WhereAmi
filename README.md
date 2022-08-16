@@ -1,6 +1,6 @@
 # WhereAmi
 
-![Logo]()
+![Logo](assets/WhereAmi.png)
 
 Where am I?
 
