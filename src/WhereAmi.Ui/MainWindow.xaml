@@ -1,0 +1,39 @@
+﻿<Window x:Name="Window" x:Class="WhereAmi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="clr-namespace:WhereAmi"
+        mc:Ignorable="d"
+        Title="WhereAmi"
+        Height="120"
+        Width="120"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        ResizeMode="NoResize"
+        Topmost="True"
+        AllowsTransparency="True"
+        FontSize="16"
+        WindowStyle="None"
+        Background="{x:Null}"
+        d:DataContext="{d:DesignInstance ui:LocationApplicationViewModel}">
+
+    <Grid ui:DragUtility.EnableDrag="True">
+        <Border Background="#33000000" CornerRadius="60" />
+        <ToggleButton Style="{DynamicResource CircleButton}"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      Margin="20"
+                      Background="#FF386D4F"
+                      Foreground="White"
+                      Command="{Binding ListenCommand}" 
+                      CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}"
+                      />
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Exit" Command="{Binding CloseCommand}" />
+            </ContextMenu>
+        </Grid.ContextMenu>
+    </Grid>
+
+</Window>

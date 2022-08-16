@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Split('.')[0])</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ReactiveProperty" Version="8.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WhereAmi.Actions\WhereAmi.Actions.csproj" />
+    <ProjectReference Include="..\WhereAmi.Application\WhereAmi.Application.csproj" />
+    <ProjectReference Include="..\WhereAmi.Location\WhereAmi.Location.csproj" />
+    <ProjectReference Include="..\WhereAmi.SpeechRecognition\WhereAmi.SpeechRecognition.csproj" />
+  </ItemGroup>
+
+</Project>

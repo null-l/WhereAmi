@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Split('.')[0])</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WhereAmi.Abstractions\WhereAmi.Abstractions.csproj" />
+    <ProjectReference Include="..\WhereAmi.Actions\WhereAmi.Actions.csproj" />
+    <ProjectReference Include="..\WhereAmi.Location\WhereAmi.Location.csproj" />
+    <ProjectReference Include="..\WhereAmi.SpeechRecognition\WhereAmi.SpeechRecognition.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ReactiveProperty" Version="8.1.2" />
+  </ItemGroup>
+
+
+</Project>
